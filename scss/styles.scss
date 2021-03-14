@@ -38,15 +38,23 @@ $base-color: #000000;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: rgb(255, 255, 255);
-$background-alt: #5eb373;
+$background: #202020;
+$background-alt: #ffffff;
+$body-background: #eeeeee;
+
+// Menu Color
+$menu-color:#202020;
+$menu-text-color: #ffffff;
+
+//Downlod Button
+$download-button-color:#ffffff;
 
 // Define border colors
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
+$heading: #317299;
+$text: #000000;
 
 /*
     ---------------------
@@ -85,8 +93,9 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     font-size: 16px;
+    background: $body-background;
 
     &.active {
         overflow: hidden;
@@ -154,7 +163,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: $menu-color;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -168,7 +177,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $menu-text-color;
         padding: 10px;
 
         &:hover {
@@ -211,14 +220,14 @@ header {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: $background;
+    background: $menu-color;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: $background;
+    background: $menu-color;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
@@ -294,9 +303,9 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: $download-button-color;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid $download-button-color;
     border-radius: 30px;
     @include transition();
 
@@ -306,6 +315,15 @@ footer {
         text-decoration: none;
     }
 }
+
+.btn-rounded { 
+    display: inline-block;
+    color: $download-button-color;
+    // padding: 15px 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;}
+
 
 .shadow {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -350,7 +368,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/teahub.io-ultra-hd-wallpapers-77443.png);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -370,16 +388,16 @@ footer {
     }
 
     h1 {
-        color: #fff;
+        color:#317299;
         font-weight: 900;
-        font-size: 5em;
+        font-size: 3em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: rgb(255, 255, 255);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -395,7 +413,7 @@ footer {
     bottom: 0;
     left: 0;
     z-index: 1;
-    background: rgba($base-color-hover, 0.8);
+    // background: rgba($base-color-hover, 0.8);
 }
 
 #lead-down {
@@ -544,10 +562,10 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: rgb(255, 255, 255);
     width: 50px;
     height: 50px;
-    background: $base-color;
+    background: $menu-color;
     border-radius: 50%;
     float: left;
     z-index: 99;
@@ -632,7 +650,7 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
+    border-bottom: 2px solid $border;
     text-align: center;
     vertical-align: middle;
     height: fit-content;
@@ -739,7 +757,7 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: $base-color;
+    background: $background;
     text-align: center;
 
     h2 {
